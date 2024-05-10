@@ -3,11 +3,11 @@ function computerchoice()
 {
     let a=Math.random();
     if (a<0.33)
-    {return rocks;}
+    {return "rocks";}
     if (a<0.66)
-    {return papers;}
+    {return "papers";}
     else
-    {return scissors;}
+    {return "scissors";}
 }
 function humanchoice()
 {let b= prompt("rocks,papers or scissors");
@@ -15,68 +15,73 @@ function humanchoice()
 return c;
 }
 
-let human=humanchoice();
-let computer=computerchoice();
+
 let humanpoints=0;
 let computerpoints=0;
-let rounds=0;
-
-while (rounds<11)
+let i;
+for(i=1;i<5;i++)
 {
-
-if (computer==rocks)
+    let human = humanchoice();
+    let computer = computerchoice();
+if (computer=="rocks")
 {switch(human)
- {case rocks:
+ {case "rocks":
  alert("It is a tie");
  humanpoints++;
  computerpoints++;
  break;
- case papers:
+ case "papers":
  alert("You win;")
  humnapoints++;
  humanpoints++;
  break;
- case scissors:
+ case "scissors":
  alert ("You lose")
  computerpoints++;
  computerpoints++;
 break;
 }
-else if(computer==papers)
+
+
+
+
+
+}
+else if(computer=="papers")
 {
     switch(human)
     {
-        case rocks:
+        case "rocks":
             alert("You lose");
             computerpoints++;
             computerpoints++;
             break;
-            case papers:
+            case "papers":
                 alert("It is a tie");
                 computerpoints++;
                 humnapoints++;
                 break;
-                case scissors:
+                case "scissors":
                     alert("You won.");
                     humanpoints++;
                     humnapoints++;
                     break;
     }
 }
-else if (computer==scissors)
+else if (computer=="scissors")
 {
     switch(human){
-        case rocks:
+        case "rocks":
             alert("You won");
             humanpoints++;
             humnapoints++;
             break;
-            case papers:
+            case "papers":
                 alert("You lost");
                 computerpoints++;
                 computerpoints++;
                 break;
-                case scissors:
+                case "scissors":
                     alert("It is a tie");
                     humanpoints++;
                     computerpoints++;
@@ -85,10 +90,7 @@ else if (computer==scissors)
     }
 }
 else
-alert("Wrong input";)
+alert("Wrong input");
 
-}
-rounds=humanpoints+computerpoints;
-console.log("Computer:"computerpoints
-"you:" humanpoints;)
+
 }
